@@ -1,15 +1,15 @@
 import streamlit as st
-import pickle
 import numpy as np
+import pandas as pd
 
 # Set page title
 st.set_page_config(page_title="Book Recommender")
 
 # Load pre-processed data from pickle files
-popular_df = pickle.load(open('popular.pkl', 'rb'))
-pt = pickle.load(open('final_pt.pkl', 'rb'))
-books = pickle.load(open('books.pkl', 'rb'))
-similarity_scores = pickle.load(open('similarity_scores.pkl', 'rb'))
+popular_df = pd.read_pickle('popular.pkl', 'rb')
+pt = pd.read_pickle('final_pt.pkl', 'rb')
+books = pd.read_pickle('books.pkl', 'rb')
+similarity_scores = pd.read_pickle('similarity_scores.pkl', 'rb')
 
 # Define the main function of the app
 def main():
