@@ -6,10 +6,10 @@ import pandas as pd
 st.set_page_config(page_title="Book Recommender")
 
 # Load pre-processed data from pickle files
-popular_df = pd.read_pickle('popular.pkl', 'rb')
-pt = pd.read_pickle('final_pt.pkl', 'rb')
-books = pd.read_pickle('books.pkl', 'rb')
-similarity_scores = pd.read_pickle('similarity_scores.pkl', 'rb')
+popular_df = pd.read_pickle('popular.pkl')
+pt = pd.read_pickle('final_pt.pkl')
+books = pd.read_pickle('books.pkl')
+similarity_scores = pd.read_pickle('similarity_scores.pkl')
 
 # Define the main function of the app
 def main():
